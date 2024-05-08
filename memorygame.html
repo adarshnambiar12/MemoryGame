@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game | Play</title>
+    <link rel="stylesheet" href="css/memorygame.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+
+<body class="player1-turn">
+
+    <div class="start-form">
+        <span class="close-icon" onclick="closeStartForm()">×</span>
+        <label for="player1Name">Player 1 Name</label>
+        <input type="text" id="player1Name" placeholder="Enter Player 1's Name">
+    
+        <label for="player2Name">Player 2 Name</label>
+        <input type="text" id="player2Name" placeholder="Enter Player 2's Name">
+    
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    
+    <div class="buttons">
+        <a href="index.html" class="main-menu-button">Main Menu</a>
+        <a class="restart-button" onclick="restartGame()">Restart Game</a>
+    </div>
+
+    <div class="memory-game">
+        <div class="grid">
+
+        </div>
+    </div>
+
+    <div class="message">
+        <div class="score">
+            <div id="player1Score">Player 1 : 0</div>
+            <div id="player2Score">Player 2 : 0</div>
+        </div>
+        <div id="currentPlayer">Player 1's Turn</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    background-image: url(/img/background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.memory-game {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #666;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #bbbbbbdd;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    gap: 1vw;
+}
+
+.card {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    padding: 7px;
+    background-color: #eee;
+    border: 1px solid #999;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+img {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    touch-action: none;
+}
+
+.card img.flip {
+    opacity: 1;
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    flex-wrap: wrap;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.main-menu-button, .restart-button {
+    font-size: 1.1rem;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.main-menu-button:hover {
+    background-color: #4CAF50;
+}
+
+.main-menu-button:hover {
+    background-color: #45a049;
+}
+
+.restart-button {
+    background-color: #f44336;
+}
+
+.restart-button:hover {
+    background-color: #d32f2f;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Update colors */
+
+body.player1-turn {
+    background-color: #cdeccd;
+    transition: background-color 0.5s ease;
+}
+
+body.player2-turn {
+    background-color: #f7c1c1;
+    transition: background-color 0.5s ease;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.player1-message {
+    color: #008000;
+}
+
+.player2-message {
+    color: #ff0000;
+}
+
+.card.matched.player1 {
+    background-color: #90ee90;
+    pointer-events: none;
+}
+
+.card.matched.player2 {
+    background-color: #ff9999;
+    pointer-events: none;
+}
+
+/* Player Info */
+.start-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.start-form label{
+    color: #eee;
+    font-size: 1rem;
+}
+
+.start-form input, .start-form button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 5px;
+}
+
+.start-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 212px;
+}
+
+.start-form button:hover {
+    background-color: #45a049;
+}
+
+.close-icon {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.5s;
+}
+
+.close-icon:hover {
+    color: #f7c1c1;
+}

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.menu-container {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+p{
+    margin: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.start-button,
+.instructions-button {
+    padding: 10px 80px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.start-button:hover,
+.instructions-button:hover {
+    background-color: #45a049;
+}
